@@ -9,6 +9,8 @@
                 <h5>注册</h5>
             </div>
             <div class="panel-body">
+                @include('shared.errors')
+
                 <form action="{{ route('users.store') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
