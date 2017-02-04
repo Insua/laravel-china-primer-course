@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b511eeda09f13b64e87ac6208fa27e8",
-    "content-hash": "8c3fd37f915c90b441356413bd2acb71",
+    "hash": "36bc39957fae11f8cfd2e456b7978bb9",
+    "content-hash": "61485f68367c4456e8c5566e578d18f0",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -175,6 +175,46 @@
                 }
             ],
             "time": "2016-06-13 19:28:20"
+        },
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "985d62d91831d34549b4fcfdd451998a793063f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/caouecs/Laravel-lang/985d62d91831d34549b4fcfdd451998a793063f4.zip",
+                "reference": "985d62d91831d34549b4fcfdd451998a793063f4",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.10"
+            },
+            "suggest": {
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2017-02-03 06:54:45"
         },
         {
             "name": "classpreloader/classpreloader",
