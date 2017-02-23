@@ -16,5 +16,7 @@
     @yield('content')
     @include('layouts._footer')
 </div>
+
+<script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

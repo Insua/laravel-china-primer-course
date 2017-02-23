@@ -12,6 +12,17 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ route('users.show',Auth::user()->id) }}">个人中心</a></li>
+                                <li><a href="#">编辑资料</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" id="logout">
+                                        <form action="{{ route('logout') }}">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                            <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                                        </form>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     @else
