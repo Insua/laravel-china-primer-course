@@ -16,6 +16,16 @@ class UsersController extends Controller
         $this->middleware('auth',[
             'only' => ['edit','update']
         ]);
+
+        $this->middleware('guest',[
+            'only' => ['create']
+        ]);
+    }
+
+    public function index()
+    {
+        $users = User::all();
+        return view('users.index',compact('users'));
     }
 
     public function create()
@@ -51,6 +61,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
+        $this->authorize('update',$user);
         return view('users.edit',compact('user'));
     }
 
@@ -62,6 +73,7 @@ class UsersController extends Controller
         ]);
 
         $user = User::findOrFail($id);
+        $this->authorize('update',$user);
 
         $data = [];
         $data['name'] = $request->name;
