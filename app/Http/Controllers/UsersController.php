@@ -58,6 +58,16 @@ class UsersController extends Controller
         return redirect()->route('users.show',[$user]);
     }
 
+    public function confirmEmail($token)
+    {
+
+    }
+
+    public function sendEmailConfirmationTo($user)
+    {
+
+    }
+
     public function edit($id)
     {
         $user = User::findOrFail($id);
