@@ -87,4 +87,12 @@ class UsersController extends Controller
 
         return redirect()->route('users.show',$id);
     }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        session()->flash('success','成功删除用户！');
+        return back();
+    }
 }
