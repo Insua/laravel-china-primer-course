@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Auth;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -60,7 +61,9 @@ class User extends Model implements AuthenticatableContract,
     //动态流
     public function feed()
     {
-        return $this->statuses()->orderBy('created_at','desc');
+        $user_ids = Auth::user()->followings->pluck('id')->toArray();
+        array_push($user_ids,Auth::user()->id);
+        return Status::whereIn('user_id',$user_ids)->with('user')->orderBy('created_at','desc');
     }
 
     //粉丝
