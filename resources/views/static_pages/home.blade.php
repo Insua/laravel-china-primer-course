@@ -10,11 +10,14 @@
                 <h3>微博列表</h3>
                 @include('shared.feed')
             </div>
-            <div class="col-md-4">
+            <aside class="col-md-4">
                 <section class="user_info">
                     @include('shared.user_info',['user'=>Auth::user()])
                 </section>
-            </div>
+                <section class="stats">
+                    @include('shared.stats',['user'=>Auth::user()])
+                </section>
+            </aside>
         </div>
     @else
     <div class="jumbotron">
